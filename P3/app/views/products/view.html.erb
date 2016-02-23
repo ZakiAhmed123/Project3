@@ -1,0 +1,24 @@
+<div class="image"><%= image_tag "#{@product.img_file}.jpg" %></div>
+<table>
+  <tr>
+    <th>Item</th>
+    <th>Price</th>
+    <th>Description</th>
+    <th> Dimensions </th>
+  <tr>
+<td><%= @product.item %></td>
+<td><p>$<% if @product.condition == "good" %>
+             <%= @product.discount %>
+               Clearance Price
+             <% elsif @product.condition == "average" %>
+             <%= price = @product.discount %>
+             Clearance Price
+             <%= price = @product.price %>
+             <% end %>
+           </p></td>
+<td><%= @product.description %></td>
+<td><%= @product.dimension_w %></td>
+<td><%= @product.dimension_l %></td>
+<td><%= @product.dimension_h %></td>
+</tr>
+</table>

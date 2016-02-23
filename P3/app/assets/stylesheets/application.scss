@@ -1,0 +1,20 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import 'welcome.scss';
+@import 'products.scss';
+
+
+h1 {
+  background-color: #2E3E4F;
+  color:white;
+  height: 100px;
+  width: 99%;
+  text-align: center;
+  line-height: 40px;
+  font-weight: lighter;
+  display: inline-block;
+  line-height: 100px;
+  margin:0px;
+  font-size: 45px;
+  margin: 15px 5px 15px 5px;
+}

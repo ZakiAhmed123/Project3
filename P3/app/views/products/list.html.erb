@@ -1,0 +1,23 @@
+
+
+    <!-- <div class="col-md-4" style=" height:300px; width:350px;display:flex;flex-wrap:wrap;"> -->
+<div class="wrapper" style="display:flex; flex-wrap:wrap;flex-direction: height:320px; height:210px; flex-direction:column">
+        <% @products.each do |product| %>
+        <%= image_tag "#{product.img_file}.jpg", {:style=>'height:210px; width:210px;', :class => "css_class"}%>
+        <div class="wrapper1" style="width:100px; height:100px;display:flex; flex-wrap:wrap;flex-direction:column">
+    <%= product.item %>
+      $<%= product.price.to_f %>
+      <p>$<% if product.condition == "good" %>
+                   <%= product.discount %>
+                     Clearance Price
+                   <% elsif product.condition == "average" %>
+                   <%= price = product.discount %>
+                   Clearance Price
+                   <%= price = product.price %>
+                   <% end %>
+                 </p>
+      <%= link_to "More Info", "/products/#{product.pid}" %>
+      <% end %>
+    </div>
+  </div>
+    <!-- </div> -->
